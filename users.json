@@ -1,0 +1,19 @@
+{
+    "foxynoxy07@gmail.com": {
+        "password": "Naumburger12",
+        "data": {
+            "name": "Koya",
+            "lastname": "Nishio",
+            "telephone": "+49 15257251307"
+        }
+    },
+    "koya09052011@gmail.com": {
+        "password": "Naumburger12",
+        "data": {
+            "name": "Koya",
+            "lastname": "Nishio",
+            "telephone": "+49 15257251307"
+        },
+        "reset_code": "224264"
+    }
+}
