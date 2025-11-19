@@ -15,5 +15,22 @@
             "telephone": "+49 15257251307"
         },
         "reset_code": "224264"
+    },
+    "yuto090813@gmail.com": {
+        "password": "Yuto2013",
+        "data": {
+            "name": "Yuto",
+            "lastname": "Nishio",
+            "telephone": ""
+        },
+        "reset_code": "570560"
+    },
+    "motonobu0303@icloud.com": {
+        "password": "Motonobu1973",
+        "data": {
+            "name": "Motonobu",
+            "lastname": "Nishio",
+            "telephone": ""
+        }
     }
 }
