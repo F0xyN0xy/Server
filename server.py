@@ -78,7 +78,7 @@ def send_reset_email(email, reset_code):
 
 @app.route('/api/register', methods=['POST'])
 def register():
-    data = request.json
+    data = request.get_json(silent=True) or {}
     email = data.get('email', '').strip()
     password = data.get('password', '')
     name = data.get('name', '')
@@ -110,7 +110,7 @@ def register():
 
 @app.route('/api/login', methods=['POST'])
 def login():
-    data = request.json
+    data = request.get_json(silent=True) or {}
     email = data.get('email', '').strip()
     password = data.get('password', '')
 
@@ -133,7 +133,7 @@ def login():
 
 @app.route('/api/password-strength', methods=['POST'])
 def check_password_strength():
-    data = request.json
+    data = request.get_json(silent=True) or {}
     password = data.get('password', '')
     score = password_strength(password)
     
@@ -148,7 +148,7 @@ def check_password_strength():
 
 @app.route('/api/forgot-password', methods=['POST'])
 def forgot_password():
-    data = request.json
+    data = request.get_json(silent=True) or {}
     email = data.get('email', '').strip()
 
     users = load_users()
@@ -167,7 +167,7 @@ def forgot_password():
 
 @app.route('/api/reset-password', methods=['POST'])
 def reset_password():
-    data = request.json
+    data = request.get_json(silent=True) or {}
     email = data.get('email', '').strip()
     code = data.get('code', '').strip()
     new_password = data.get('password', '')
@@ -206,7 +206,7 @@ def get_profile(email):
 
 @app.route('/api/profile/<email>', methods=['PUT'])
 def update_profile(email):
-    data = request.json
+    data = request.get_json(silent=True) or {}
     new_email = data.get('email', '').strip()
     name = data.get('name', '')
     lastname = data.get('lastname', '')
@@ -241,7 +241,7 @@ def update_profile(email):
 
 @app.route('/api/profile/<email>', methods=['DELETE'])
 def delete_account(email):
-    data = request.json
+    data = request.get_json(silent=True) or {}
     password = data.get('password', '')
 
     users = load_users()
